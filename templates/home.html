@@ -15,19 +15,28 @@
 
 
 
-    <h1 class="text-6xl font-bold font-sans m-2 text-center text-gray-600 py-4 shadow-md">Gig.Next</h1>
+    <h1 class="text-7xl font-bold font-sans m-2 text-center text-gray-600 py-4 shadow-md">Gig.Next</h1>
 
 
 
     <img class="container  w-screen h-full mx-auto rounded-xl py-4 shadow-lg   " src = "https://59c42aae-b0c5-48bc-a3d0-f0a8d7520fcd-00-22choi76bucmd.pike.replit.dev/static/Banner.jpg" height=320 >
 
-    <h2 class=" p-4 pt-10  text-center font-semibold text-3xl  text-gray-800 = ">Dive into the <span class="text-slate-800 italic underline decoration-neutral-700 font-bold">GIG</span> economy and find your perfect match.</h2>
+    <h2 class=" p-4 pt-10  text-center font-semibold text-5xl  text-gray-800 = ">Dive into the <span class="text-slate-800 italic underline decoration-neutral-700 font-bold">GIG</span> economy and find your perfect match.</h2>
 
 
-  <p class="text-center p-4 ">Gig.next is the ultimate platform for finding and landing your next freelance gig. With a vast database of projects and a user-friendly interface, you can easily discover opportunities that align with your skills and interests. Whether you're a seasoned freelancer or just starting out, gig.next connects you with businesses seeking top talent. </p>
-  <h2>Open Positions</h2>
-  <p>TODO - Show the jobs here</p>
-  <button>Contact Us</button>
+  <p class="text-center  px-11 p-4 text-xl max-w-fit ">Gig.next is the ultimate platform for finding and landing your next freelance gig. With a vast database of projects and a user-friendly interface, you can easily discover opportunities that align with your skills and interests. Whether you're a seasoned freelancer or just starting out, gig.next connects you with businesses seeking top talent. </p>
+  <h2 class="text-center p-4 text-5xl font-semibold text-gray-800 border-2 border-slate-100 p-4 my-4"">Open Positions</h2>
+  <div>
+    {% for job in Jobs %}
+     {% include 'jobitem.html' %}
+     
+    {% endfor %}
+  </div>
+  <button class=" flex m-5  mx-auto w-50%  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Contact Us
+  </button>
+
+  <p class="text-center text-gray-600""> Copyright 2022,Shashwatsinghdit@gmail.com</p>
 
 </body>
 </html> 
