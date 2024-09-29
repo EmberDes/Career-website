@@ -8,23 +8,42 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class=" w-screen h-12 bg-slate-500 ">
+  {% include 'header.html' %}
+  <div class="text-center p-4 md:p-8 lg:p-12 xl:p-16">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold  mb-4">Discover exciting gigs and events tailored to your interests on
+      <h1 class="text-7xl font-bold font-sans m-2 text-center text-gray-600 ">Gig.Next</h1>
+      .</h2>
+    <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed mb-8">Join our growing community of <span class="text-gray-500 font-bold">{{ visitor_count }}</span> passionate individuals who've already found their perfect match.</p>
+    <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed mb-8">Whether you're seeking a casual meetup or a full-fledged adventure, we have something for everyone.</p>
+    <button class="bg-slate-500 hover:bg-slate-300 text-white font-bold py-2 px-4 rounded">Start exploring today and be part of the vibrant 
 
+      <span class="text-slate-800 italic underline decoration-neutral-700 font-bold">GIG</span>
+    
+      experience!</button>
   </div>
 
+  <img class="container mx-auto  py-4 shadow-md  border-gray-200 max-w-md" src="https://59c42aae-b0c5-48bc-a3d0-f0a8d7520fcd-00-22choi76bucmd.pike.replit.dev/static/Banner.jpg" height="320" alt="Banner image">
 
+  <div class="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="note bg-gray-200 p-4 rounded shadow-md">
+      <h2 class="text-center pt-2 text-2xl font-semibold text-gray-600">Dive into the economy and find your perfect match.</h2>
+      <p class="text-center text-lg leading-relaxed text-gray-600">Gig.next is a platform that connects freelancers with businesses, offering a vast database of projects and a user-friendly interface to help you find your next gig.</p>
+    </div>
+    <div class="note bg-gray-300 p-4 rounded shadow-md">
+      <h2 class="text-center pt-2 text-2xl font-semibold text-gray-600">Get discovered by top businesses</h2>
+      <p class="text-center text-lg leading-relaxed text-gray-600">Create a profile, showcase your skills, and get discovered by top businesses looking for talented freelancers like you.</p>
+    </div>
+    <div class="note bg-gray-200 p-4 rounded shadow-md">
+      <h2 class="text-center pt-2 text-2xl font-semibold text-gray-600">Work on your own terms</h2>
+      <p class="text-center text-lg leading-relaxed text-gray-600">Choose from a variety of projects that fit your schedule and interests. Work on your own terms and enjoy the freedom of freelancing.</p>
+    </div>
+    <div class="note bg-gray-300 p-4 rounded shadow-md">
+      <h2 class="text-center pt-2 text-2xl font-semibold text-gray-600">Get paid for your work</h2>
+      <p class="text-center text-lg leading-relaxed text-gray-600">Get paid for your work through our secure payment system. Enjoy timely payments and focus on what you do best - creating amazing work.</p>
+    </div>
+  </div>
 
-
-    <h1 class="text-7xl font-bold font-sans m-2 text-center text-gray-600 py-4 shadow-md">Gig.Next</h1>
-
-
-
-    <img class="container  w-screen h-full mx-auto rounded-xl py-4 shadow-lg   " src = "https://59c42aae-b0c5-48bc-a3d0-f0a8d7520fcd-00-22choi76bucmd.pike.replit.dev/static/Banner.jpg" height=320 >
-
-    <h2 class=" p-4 pt-10  text-center font-semibold text-5xl  text-gray-800 = ">Dive into the <span class="text-slate-800 italic underline decoration-neutral-700 font-bold">GIG</span> economy and find your perfect match.</h2>
-
-
-  <p class="text-center  px-11 p-4 text-xl max-w-fit ">Gig.next is the ultimate platform for finding and landing your next freelance gig. With a vast database of projects and a user-friendly interface, you can easily discover opportunities that align with your skills and interests. Whether you're a seasoned freelancer or just starting out, gig.next connects you with businesses seeking top talent. </p>
+  
   <h2 class="text-center p-4 text-5xl font-semibold text-gray-800 border-2 border-slate-100 p-4 my-4"">Open Positions</h2>
   <div>
     {% for job in Jobs %}
@@ -32,11 +51,10 @@
      
     {% endfor %}
   </div>
-  <button class=" flex m-5  mx-auto w-50%  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Contact Us
-  </button>
+  
 
-  <p class="text-center text-gray-600""> Copyright 2022,Shashwatsinghdit@gmail.com</p>
+  {% include "footer.html" %}
+  
 
 </body>
 </html> 
