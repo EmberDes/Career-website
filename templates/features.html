@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">Features</h1>
+    <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed mb-8">Gig.Next offers a range of features to help you find your next gig.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div class="note bg-gray-200 p-4 rounded shadow-md">
+        <div class="flex items-center">
+          <i class="fas fa-search fa-2x text-gray-600 mr-2"></i>
+          <h2 class="text-2xl font-semibold text-gray-600">Project Search</h2>
+        </div>
+        <p class="text-lg leading-relaxed text-gray-600">Search for projects by keyword, location, and category.</p>
+      </div>
+      <div class="note bg-gray-300 p-4 rounded shadow-md">
+        <div class="flex items-center">
+          <i class="fas fa-user fa-2x text-gray-600 mr-2"></i>
+          <h2 class="text-2xl font-semibold text-gray-600">Freelancer Profiles</h2>
+        </div>
+        <p class="text-lg leading-relaxed text-gray-600">Create a profile to showcase your skills and experience.</p>
+      </div>
+      <div class="note bg-gray-200 p-4 rounded shadow-md">
+        <div class="flex items-center">
+          <i class="fas fa-briefcase fa-2x text-gray-600 mr-2"></i>
+          <h2 class="text-2xl font-semibold text-gray-600">Project Management</h2>
+        </div>
+        <p class="text-lg leading-relaxed text-gray-600">Manage your projects and clients in one place.</p>
+      </div>
+      <div class="note bg-gray-300 p-4 rounded shadow-md">
+        <div class="flex items-center">
+          <i class="fas fa-money fa-2x text-gray-600 mr-2"></i>
+          <h2 class="text-2xl font-semibold text-gray-600">Secure Payments</h2>
+        </div>
+        <p class="text-lg leading-relaxed text-gray-600">Get paid securely and on time.</p>
+      </div>
+      <div class="note bg-gray-200 p-4 rounded shadow-md">
+        <div class="flex items-center">
+          <i class="fas fa-support fa-2x text-gray-600 mr-2"></i>
+          <h2 class="text-2xl font-semibold text-gray-600">Customer Support</h2>
+        </div>
+        <p class="text-lg leading-relaxed text-gray-600">Get help when you need it.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Add some animation to the page -->
+  <script>
+    // Animate the icons on hover
+    const icons = document.querySelectorAll('.fas');
+
+    icons.forEach(icon => {
+      icon.addEventListener('mouseover', () => {
+        icon.classList.add('animated', 'pulse');
+      });
+
+      icon.addEventListener('mouseout', () => {
+        icon.classList.remove('animated', 'pulse');
+      });
+    });
+
+    // Animate the notes on hover
+    const notes = document.querySelectorAll('.note');
+
+    notes.forEach(note => {
+      note.addEventListener('mouseover', () => {
+        note.classList.add('shadow-lg');
+      });
+
+      note.addEventListener('mouseout', () => {
+        note.classList.remove('shadow-lg');
+      });
+    });
+  </script>
+{% endblock %}

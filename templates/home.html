@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gig.Next</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  {% include 'header.html' %}
+{% extends 'base.html' %}
+{% block content %}
   <div class="text-center p-4 md:p-8 lg:p-12 xl:p-16">
     <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold  mb-4">Discover exciting gigs and events tailored to your interests on
       <h1 class="text-7xl font-bold font-sans m-2 text-center text-gray-600 ">Gig.Next</h1>
@@ -52,9 +43,4 @@
     {% endfor %}
   </div>
   
-
-  {% include "footer.html" %}
-  
-
-</body>
-</html> 
+{% endblock %}

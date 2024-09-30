@@ -47,6 +47,32 @@ def list_jobs():
 def get_visitor_count():
   return jsonify({'visitor_count': visitor_count})
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+@app.route('/features')
+def features():
+      return render_template('features.html')
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        # Handle the form data here (e.g., send an email)
+        return redirect(url_for('contact'))
+    return render_template('contact.html')
+
+@app.route('/pricing')
+def pricing():
+    return render_template('pricing.html')
+
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
+
+
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
