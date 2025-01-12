@@ -6,6 +6,8 @@
 
 Gig.Next is a web application built using Flask as the backend, Tailwind CSS for styling, and HTML for the frontend. The app utilizes Postgres as its database and is deployed on Render.
 
+The Website is live at : https://career-website-5pgx.onrender.com/
+
 ## Technologies Used
 --------------------
 
